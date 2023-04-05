@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import { useSelector } from 'react-redux';
 import { Blog, Author, AllBlogs } from '@/types';
+import Head from 'next/head';
 import moment from 'moment';
 import Comments from '@/components/Comments';
 
@@ -18,7 +19,13 @@ const Details = () => {
     blogs.find((blg: Blog) => blg.id === id) as Blog;
 
   return (
-    <div>
+    <>
+      <Head>
+        <title>Blog Details</title>
+        <meta name='description' content='Technical assessment' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
       <h1>{title.toUpperCase()}</h1>
       <p>{description}</p>
       <h2>Authors</h2>
@@ -31,7 +38,7 @@ const Details = () => {
       <p>This blog is created {moment(createdAt).fromNow()}</p>
       <p>This blog is updated {moment(updatedAt).fromNow()}</p>
       <button onClick={() => back()}>Go Back</button>
-    </div>
+    </>
   );
 };
 
