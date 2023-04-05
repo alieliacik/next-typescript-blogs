@@ -6,8 +6,9 @@ import Comments from '@/components/Comments';
 
 const Details = () => {
   const {
-    isReady,
     query: { id },
+    isReady,
+    back,
   } = useRouter();
 
   const { blogs } = useSelector((state: { blogs: AllBlogs }) => state.blogs);
@@ -29,6 +30,7 @@ const Details = () => {
       <Comments comments={comments} isDetailsPage />
       <p>This blog is created {moment(createdAt).fromNow()}</p>
       <p>This blog is updated {moment(updatedAt).fromNow()}</p>
+      <button onClick={() => back()}>Go Back</button>
     </div>
   );
 };
