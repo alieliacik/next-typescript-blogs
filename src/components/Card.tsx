@@ -217,8 +217,9 @@ const BackFace = styled.div`
 
 const Button = styled.button`
   position: absolute;
-  left: 34%;
-  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 6%;
   padding: 0.9rem 1.6rem;
   border-radius: 0.2rem;
   transition: all 0.2s;
@@ -292,7 +293,7 @@ const CardContainer = styled.div<CardContainerProps>`
 
   @media (max-width: 34em) {
     width: 92%;
-    height: calc(43vw / 3 * 4);
+    height: calc(55vw / 3 * 4);
     margin: 4%;
   }
 
