@@ -1,1 +1,1 @@
-https://next-typescript-blogs-alieliacik.vercel.app/
+Demo: https://next-typescript-blogs-alieliacik.vercel.app/
